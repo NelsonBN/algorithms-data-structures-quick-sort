@@ -12,10 +12,11 @@ def quick_sort(arr, left = 0, right = None):
 
 
 def partition(arr, left, right):
+    pivot = arr[right]
     i = left
 
     for j in range(left, right):
-        if arr[j] <= arr[right]:
+        if arr[j] <= pivot:
             arr[i], arr[j] = arr[j], arr[i]
             i += 1
 
